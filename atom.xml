@@ -1,0 +1,31 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>withusmon</title>
+  <link href="http://withusmon.com/"/>
+  <link type="application/atom+xml" rel="self" href="http://withusmon.com//atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://withusmon.com//</id>
+  <author>
+    <name>Usmon Ma'sudjonov</name>
+    <email>usmon.work@gmail.com</email>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <id>http://withusmon.com/{{ post.id }}</id>
+    <link type="text/html" rel="alternate" href="http://withusmon.com/{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>Usmon Ma'sudjonov</name>
+      <uri>http://withusmon.com/</uri>
+    </author>
+    <content type="html">&lt;a href="http://withusmon.com/{{ post.url }}"&gt;read it here&lt;/a&gt;</content>
+  </entry>
+  {% endfor %}
+</feed>

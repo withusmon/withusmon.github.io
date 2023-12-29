@@ -1,0 +1,36 @@
+---
+---
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>withusmon</title>
+<link href="/atom.xml" rel="alternate" title="atom feed" type="application/atom+xml">
+<link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<body>
+  <div class="box center-box">
+    <div class="name">
+      <span style="color: #CC0000;">with</span>usmon
+    </div>
+    <div style="margin-bottom: 1em;">
+      a blog of software engineer.
+    </div>
+    <div style="font-size: smaller; display: inline-block;" class="favicons">
+      { <a href="mailto:usmon.work@gmail.com">usmon.work@gmail.com</a> | <a href="http://twitter.com/usmonmasudjonov">@usmonmasudjonov</a> }
+    </div>
+    <div>
+
+    </div>
+  </div>
+  <br/>
+  <div class="box posts">
+    {% for post in site.posts %}
+      <article>
+        <a class="title" href="{{ post.url }}">&#9654; {{ post.title }}</a>
+      </article>
+    {% endfor %}
+  </div>
+</body>
+</html>
